@@ -1,0 +1,261 @@
+.page{
+  background-color: #E8F0F8;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  height: 100vh;
+  
+}
+
+.steps {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.step.active {
+  background-color: #3facdf;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tips{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: rgb(140, 154, 158);
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.option {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: #3facdf;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.picker {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.previous-button {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ccc;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.next-button {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #3facdf;
+  color: #fff;
+  cursor: pointer;
+}
+
+.generated-plan {
+  font-size: 18px;
+  margin-top: 40px;
+}
+/* 在页面的 WXSS 文件中 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+
+
+.run-button:hover {
+  background-color: #ff2255;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 14px;
+  color: #999;
+}
+
+.value {
+  font-size: 14px;
+  color: #333;
+  margin-left: 5px;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 100px;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #00aeff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #E8F0F8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.label {
+  font-size: 14px;
+  color: #999999;
+}
+
+.value {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+
+.button-container {
+  margin-top: 20px;
+}
+
+.run-button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #00ccff;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+

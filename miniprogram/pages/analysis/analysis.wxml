@@ -1,0 +1,16 @@
+<header></header>
+<view class="container">
+  <view class="option" bindtap="redirectToReport">
+    <text class="option-text">您的行走日历</text>
+    <image class="option-icon" src="/images/report-icon.png"></image>
+  </view>
+  <view class="option" bindtap="redirectToPlan">
+    <text class="option-text">制定您的跑步目标</text>
+    <image class="option-icon" src="/images/plan-icon.png"></image>
+  </view>
+  <view class="option" bindtap="redirectToVisual">
+    <text class="option-text">可视化您的运动数据</text>
+    <image class="option-icon" src="/images/visual-icon.png"></image>
+  </view>
+</view>
+<footer></footer>

@@ -1,0 +1,24 @@
+<header></header>
+<view class="container">
+  <!-- 用户头像和用户名 -->
+  <view class="user-info">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <text class="username">{{username}}</text>
+  </view>
+  <!-- 跑步数据可视化展示 -->
+  <view class="running-data">
+    <text class="title">跑步数据</text>
+    <canvas id="runningChart" canvas-id="runningChart" style="width: 100%; height: 500rpx;"></canvas>
+  </view>
+  <!-- 卡路里数据消耗可视化展示 -->
+  <view class="calories-data">
+    <text class="title">卡路里数据消耗占比</text>
+    <canvas id="caloriesChart" canvas-id="caloriesChart" style="width: 100%; height: 500rpx;"></canvas>
+  </view>
+  <!-- 微信步数可视化展示 -->
+  <view class="step-data">
+    <text class="title">每日步数</text>
+    <canvas id="stepChart"  canvas-id="stepChart" style="width: 100%; height: 500rpx;"></canvas>
+  </view>
+</view>
+<footer></footer>

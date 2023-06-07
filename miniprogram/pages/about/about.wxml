@@ -1,0 +1,82 @@
+<header></header>
+<view class="container">
+  <view wx:if="{{!isLogged}}" class="unlogin">
+  <text class="login-text">请登录</text>
+   <!-- 获取头像 -->
+  <button
+    class="avatar-wrapper"
+    open-type="chooseAvatar"
+    bind:chooseavatar="onChooseAvatar">
+        <image
+            class="unavatar"
+            src="{{avatarUrl}}"
+            mode="widthFix">
+        </image>
+   <!-- 获取昵称 -->    
+</button>
+    <input
+    type="nickname"
+    class="weui-input"
+    placeholder="请输入昵称"
+    bindinput="bindKeyInput"
+    bindblur="bindblurFn"
+/>
+
+  <!-- 登录按钮 -->
+    <button class="login-button" bindtap="login" >登录</button>
+  
+
+  </view>
+
+  <view wx:else>
+    <!-- 头像和ID -->
+    <view>
+  <button
+    class="avatar-wrapper"
+    open-type="chooseAvatar"
+    bind:chooseavatar="handleAvatarClick">
+        <image
+            class="avatar"
+            src="{{avatarUrl}}"
+            mode="widthFix">
+        </image>
+  <!-- 获取昵称 -->    
+</button>
+
+    </view>
+    <view class="user-info"  bindtap="handleNameClick">
+      <text class="user-id">{{userId}}</text>
+    </view>
+    <!-- 运动数据区域 -->
+    <view class="data-block">
+      <view class="data-item">
+        <text class="label">今日步数</text>
+        <text class="data-value">{{todaySteps}}</text>
+        <text class="unit">步</text>
+      </view>
+      <!-- <view class="data-item">
+        <text class="label">消耗卡路里</text>
+        <text class="data-value">{{calories}}</text>
+        <text class="unit">卡</text>
+      </view> -->
+      <view class="data-item">
+        <text class="label">行走距离</text>
+        <text class="data-value">{{distance}}</text>
+        <text class="unit">公里</text>
+      </view>
+      <view class="data-item">
+        <text class="label">运动使人快乐~</text>
+     
+      </view>
+    </view >
+    <view class="logout" bindtap="logout" >
+  <text class="logout-text">注销账号</text>
+  </view>
+    
+  
+</view>
+<!-- 一言-->
+  <view class="encouragement">{{encouragement}}</view>
+    <view class="about" bindtap="gotoLonglongPage">关于作者</view>
+  </view>
+<footer></footer>

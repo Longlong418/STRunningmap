@@ -1,0 +1,26 @@
+view, text{
+  box-sizing: border-box;
+}
+page{
+  /* 主题色 */
+  --themeColor: hsl(207, 88%, 30%);
+  --globalColor: #1a1b1c;
+  --focusColor: #4c4d4e;
+  --descColor: #06212e;
+  --greyColor:#8e8e8e;
+  --subColor: #b1b2b3;
+  --lightColor:#f1f1f1fb;
+  --globalBgColor1: #e3e4e5;
+  --globalBgColor2: #f6f7f8;
+  --globalBgColor3: #ffffff;
+}
+.pubTitle{
+  text-align: center;
+}
+.pubTitle .en{
+  font-size: 86rpx;
+  font-weight: 900;
+  text-transform: uppercase;
+  color:var(--themeColor);
+  opacity: 0.1;
+}

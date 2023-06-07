@@ -1,0 +1,33 @@
+<header></header>
+<view class="container">
+<view class="headers">
+  <view class="profile">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <view class="username">{{username}}</view>
+  </view>
+  <!-- <view class="months">{{currentYear}}年{{currentMonth}}月</view> -->
+  <view class="total-steps">近30天微信总步数：{{totalSteps}}步</view>
+</view>
+
+<view class="calendar">
+  <view class="header">
+    <view class="month">{{currentYear}}年{{currentMonth}}月</view>
+    <view class="prev" bindtap="prevMonth">上个月</view>
+    <view class="next" bindtap="nextMonth">下个月</view>
+  </view>
+  <view class="weekdays">
+    <view wx:for="{{weekdays}}" wx:key="index" class="weekday">{{item}}</view>
+  </view>
+  <view class="dates">
+    <view wx:for="{{calendarData}}" wx:key="index" class="date {{item.isToday ? 'today' : ''}}" bindtap="selectDate" data-date="{{item.date}}">
+      <view class="day">{{item.day}}</view>
+      <view class="steps">{{item.steps}}</view>
+    </view>
+  </view>
+</view>
+ <view class="step-data">
+    <text class="title">每日步数统计</text>
+    <canvas id="stepChart"  canvas-id="stepChart" style="width: 100%; height: 500rpx;"></canvas>
+  </view>
+</view>
+<footer></footer>

@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #00e4ff, #4e7fff);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.option {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.option::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotateX(60deg) rotateY(45deg) translateZ(-100px);
+  pointer-events: none;
+}
+
+.option::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotateX(60deg) rotateY(-45deg) translateZ(-100px);
+  pointer-events: none;
+}
+
+.option:hover {
+  animation: spin 3s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.option-text {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.option-icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  
+}

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/analysis/analysis",
+    "pages/about/about",
+    "pages/report/report",
+    "pages/plan/plan",
+    "pages/visual/visual",
+    "pages/Longlong/Longlong",
+    "pages/run/run",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "STRunningmap",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/selecthome.png"
+      },
+      {
+        "pagePath": "pages/analysis/analysis",
+        "text": "运动分析",
+        "iconPath": "images/分析.png",
+        "selectedIconPath": "images/select分析.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/selectabout.png"
+      }
+    ]
+  },
+
+  
+   "requiredPrivateInfos": ["getLocation", "chooseLocation", "chooseAddress"],
+   "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的地理位置信息用于实时跑步功能"
+    }
+  },
+
+  "usingComponents": {
+    "header": "components/header/header",
+    "articless": "components/articless/articless",
+    "footer": "components/footer/footer"
+    
+    
+  }
+}

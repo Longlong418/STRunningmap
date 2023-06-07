@@ -1,0 +1,60 @@
+<header></header>
+<view class="banner">
+<swiper style="text-align:center;"
+interval="3000"
+circular
+autoplay
+indicator-dots  
+indicator-active-color="hsl(207, 88%, 30%)"
+indicator-color="rgba(255,255,255,0.3)"
+>
+
+
+
+<swiper-item>
+<image src="/images/image2.jpg"></image>
+</swiper-item>
+
+<swiper-item>
+<image src="/images/image1.jpg"></image>
+</swiper-item>
+
+<swiper-item>
+<image src="/images/image3.jpg"></image>
+</swiper-item>
+
+</swiper>
+</view>
+<button class="cool-button" bindtap="goToRecordPage">Start To Run!</button>
+
+<view class="about">
+
+<view class="pubTitle">
+<view class="en">introduce</view>
+<view class="cn">STRunningmap - 运动启航，一路相伴</view>
+<view class="line"></view>
+</view>
+
+<view class="content">
+<view class="row">
+</view>
+<view class="row">
+STRunningmap中的"STR"代表Start To Run，表达了我们希望每个用户都能开始跑步并坚持下去的愿望，"map"则代表我们将为您提供一个运动的导航图，引领您向目标迈进。点击上方的"Start To Run!",让我们开始吧！
+</view>
+<view class="row">
+STRunningmap是一款专注于跑步和健康管理的智能运动小程序。它为您提供全方位的运动体验和个性化的指导，助您享受运动的乐趣，达到健康的生活目标。
+</view>
+<view class="row">
+该小程序具备数据记录功能，您可以记录每一次的跑步数据，包括时间、距离、配速等关键指标。通过记录和分析您的跑步数据，您可以了解自己的运动表现，设定合理的目标，并不断挑战自己，提升运动水平。</view>
+<view class="row">，除了跑步数据，STRunningmap还支持记录步数。它可以与您的微信步数进行同步，生成个人的行走日历，帮助您建立健康的步行习惯。您可以随时查看自己每天的步数统计，并对自己的行走量进行有效管理。</view>
+<view class="row">为了帮助您实现个人健身目标，STRunningmap提供设定跑步和消耗卡路里的目标功能。您可以根据自身需求和健康情况，设定合适的跑步里程和卡路里消耗目标，小程序会为您制定相应的训练计划和指导，助您逐步达成目标。</view>
+<view class="row">通过直观的图表和数据可视化，STRunningmap将帮助您更好地了解自己的运动数据。您可以查看跑步路线地图、统计图表以及各项指标的变化趋势，从而更全面地分析和评估自己的运动表现。</view>
+
+<view class="view">
+STRunningmap，启航您的运动之旅，一路相伴您的健康成长。无论您是运动新手还是经验丰富的健身爱好者，它将成为您的专属运动助手和健康管理专家。让我们一起开始STRunningmap的旅程，迈向健康、活力与成就的新高度！
+</view>
+</view>
+
+</view>
+
+<footer></footer>

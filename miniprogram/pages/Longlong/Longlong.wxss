@@ -1,0 +1,25 @@
+
+.about {
+  padding: 50rpx 30rpx 80rpx;
+  background-color: #dae4ee;
+  background-size: cover;
+}
+.item{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+  
+}
+
+.row {
+  line-height: 1.6em;
+  text-indent: 2em;
+  font-size: 32rpx;
+  padding: 60rpx 0;
+  border-bottom: 1rpx dashed var(--themeColor);
+  color: var(--focusColor);
+}
+
+

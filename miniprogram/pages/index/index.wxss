@@ -1,0 +1,105 @@
+.banner {
+  padding-top: 30rpx;
+}
+
+.banner swiper {
+  height: 360rpx;
+}
+
+.banner swiper swiper-item image {
+  width: 100%;
+  height:100%;
+  
+}
+
+.scrollNav {
+  padding: 60rpx 30rpx;
+}
+
+.scrollNav scroll-view {
+  white-space: nowrap;
+}
+
+.scrollNav scroll-view .item {
+  display: inline-block;
+  padding: 0 60rpx;
+  text-align: center;
+}
+
+.scrollNav scroll-view .item .pic {
+  width: 105rpx;
+  height: 105rpx;
+}
+
+.scrollNav scroll-view .item .pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollNav scroll-view .item .text {
+  font-size: 32rpx;
+  padding-top: 10rpx;
+}
+
+.about {
+  padding: 50rpx 30rpx 80rpx;
+  background-color: #dae4ee;
+  background-size: cover;
+}
+.cool-button {
+  padding: 10px 20px;
+  background-color: #0f78be;
+  /* background-image: linear-gradient(to right, #0f78be, #ff3333); */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  transform: perspective(500px) rotateY(0deg);
+  transition: transform 0.5s ease;
+ 
+}
+@keyframes cool-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cool-button:hover {
+  background-color: #0f78be;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: perspective(500px) rotateY(180deg);
+ 
+}
+
+.cool-button:active {
+  background-color: #0f78be;
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: cool-animation 1s ease infinite alternate;
+}
+
+
+.about .content .row {
+  line-height: 1.6em;
+  text-indent: 2em;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx dashed var(--themeColor);
+  color: var(--focusColor);
+}
+
+.about .content .row:first-child {
+  padding-top: 0;
+}
+
+.about .content .row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}

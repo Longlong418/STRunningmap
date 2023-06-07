@@ -1,0 +1,5 @@
+<view class="header">
+<view class="logo">
+<image src="/images/logo.png" mode="heightFix" class="pic"></image>
+</view>
+</view>

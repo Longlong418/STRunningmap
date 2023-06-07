@@ -1,0 +1,7 @@
+<!--components/footer/footer.wxml-->
+
+<view class="footer">
+
+<text class="text" >Longlong © {{year}}</text>
+
+</view>

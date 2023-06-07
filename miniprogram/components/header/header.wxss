@@ -1,0 +1,16 @@
+.header {
+  height: 120rpx;
+  border-bottom: 1px solid var(--themeColor);
+  background-color: var(--lightColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  height: 100%;
+}
+
+.header .logo .pic {
+  height: 100%;
+}

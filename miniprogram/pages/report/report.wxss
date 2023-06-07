@@ -1,0 +1,252 @@
+.container{
+
+  text-align: center;
+  background-color: #E8F0F8;
+  animation: slideIn 1s;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 120vh;
+}
+.headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  background: linear-gradient(to right, #0d47a1, #1e88e5);
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  border: 4rpx solid #fff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+.username {
+  font-size: 40rpx;
+  color: #fff;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.4);
+}
+
+.months {
+  font-size: 24rpx;
+  color: #fff;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.4);
+}
+
+.total-steps {
+  font-size: 40rpx;
+  color: #fff;
+  position: relative;
+  animation: glow 1.5s ease-in-out infinite;
+}
+.total-steps:before {
+  content: attr(data-steps);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  color: #ff00ff;
+  text-shadow: 0 0 10rpx #ff00ff, 0 0 20rpx #ff00ff, 0 0 30rpx #ff00ff;
+  animation: skew 3s linear infinite;
+}
+@keyframes glow {
+  0%, 100% {
+    color: #fff;
+    text-shadow: 0 0 10rpx #00ffff, 0 0 20rpx #00ffff, 0 0 30rpx #00ffff;
+  }
+  50% {
+    color: #00ffff;
+    text-shadow: 0 0 10rpx #00ffff, 0 0 20rpx #00ffff, 0 0 30rpx #00ffff;
+  }
+}
+
+@keyframes skew {
+  0% {
+    transform: skewX(0deg);
+  }
+  25% {
+    transform: skewX(-10deg);
+  }
+  50% {
+    transform: skewX(10deg);
+  }
+  75% {
+    transform: skewX(-5deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.calendar {
+  margin: 20rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.month {
+  font-size: 24rpx;
+  color: #0d47a1;   
+}
+
+.prev,
+.next {
+  font-size: 30rpx;
+  color: #fff;
+  cursor: pointer;
+  padding: 10rpx 20rpx;
+  border: none;
+  border-radius: 5rpx;
+  background-color: #1890ff;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  color: #ff00ff;
+  transform: scale(1.2);
+  background-color: #40a9ff;
+}
+.prev:before,
+.next:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #999;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+.prev:before {
+  left: -10rpx;
+}
+
+.next:before {
+  right: -10rpx;
+}
+
+.prev:hover:before,
+.next:hover:before {
+  background-color: #ff00ff;
+}
+
+.prev:after,
+.next:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: border-color 0.3s ease;
+}
+
+.prev:after {
+  border-width: 6rpx 0 6rpx 12rpx;
+  border-color: transparent transparent transparent #999;
+  left: -6rpx;
+}
+
+.next:after {
+  border-width: 6rpx 12rpx 6rpx 0;
+  border-color: transparent #999 transparent transparent;
+  right: -6rpx;
+}
+
+.prev:hover:after,
+.next:hover:after {
+  border-color: transparent transparent transparent #ff00ff;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.weekday {
+  flex: 1;
+  font-size: 30rpx;
+  color: #999;
+  text-align: center;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date {
+  width: 14.28%;
+  height: 130rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10rpx; /* 调整日期之间的垂直间距 */
+  background-color: #1176e9;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.date::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.date:hover {
+  background-color: #1e88e5;
+}
+
+.date:hover::before {
+  opacity: 1;
+}
+
+.day {
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.steps {
+  font-size: 25rpx;
+  color: #fff;
+  margin-top: 2rpx;
+}
+
+.today {
+  background-color: #3c9c2f;
+  color: #333;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}

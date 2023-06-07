@@ -1,0 +1,149 @@
+<view class="page">
+<header></header>
+
+<view class="container" wx:if="{{isdata===false}}" >
+  <view class="steps">
+    <view class="step {{steps === 1 ? 'active' : ''}}" wx:if="{{steps<=3}}">1</view>
+    <view class="step {{steps === 2 ? 'active' : ''}}" wx:if="{{steps<=3}}">2</view>
+    <view class="step {{steps === 3 ? 'active' : ''}}" wx:if="{{steps<=3}}">3</view>
+  </view>
+
+  <view wx:if="{{steps === 1}}">
+    <view class="question">请选择性别</view>
+    <view class="options">
+      <view
+        class="option {{gender === 'male' ? 'selected' : ''}}"
+        bindtap="selectGender"
+        data-gender="male"
+      >
+        男
+      </view>
+      <view
+        class="option {{gender === 'female' ? 'selected' : ''}}"
+        bindtap="selectGender"
+        data-gender="female"
+      >
+        女
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{steps === 2}}">
+    <view class="question">请输入身高和体重</view>
+    <form>
+      <view class="input-group">
+        <label>身高(cm)</label>
+        <picker
+          mode="selector"
+          range="{{heightPicker}}"
+          value="{{heightIndex}}"
+          bindchange="selectHeight"
+        >
+          <view class="picker">{{height}}</view>
+        </picker>
+      </view>
+      <view class="input-group">
+        <label>体重(kg)</label>
+        <picker
+          mode="selector"
+          range="{{weightPicker}}"
+          value="{{weightIndex}}"
+          bindchange="selectWeight"
+        >
+          <view class="picker">{{weight}}</view>
+        </picker>
+      </view>
+    </form>
+  </view>
+
+  <view wx:if="{{steps === 3}}">
+    <view class="question">设定您的今日目标</view>
+    <form>
+      <view class="input-group">
+        <label>卡路里(kcal)</label>
+        <picker
+          mode="selector"
+          range="{{kcalPicker}}"
+          value="{{kcalIndex}}"
+          bindchange="selectKcal"
+        >
+          <view class="picker">{{kcal}}</view>
+        </picker>
+      </view>
+    </form>
+     <form>
+      <view class="input-group">
+        <label>里程数(km)</label>
+        <picker
+          mode="selector"
+          range="{{kmPicker}}"
+          value="{{kmIndex}}"
+          bindchange="selectKm"
+        >
+          <view class="picker">{{km}}</view>
+        </picker>
+      </view>
+    </form>
+  </view>
+
+  <view class="button-container">
+    <button class="previous-button" wx:if="{{steps > 1&&steps<=3}}" bindtap="previous">上一步</button>
+    <button class="next-button" wx:if="{{steps<=3}}" bindtap="next">下一步</button>
+  </view>
+  <view class="tips">
+  注:您的身高、性别、体重等数据只会保存在本地，请放心填写~
+  </view>
+  <!-- <view class="generated-plan" wx:if="{{planGenerated}}">
+    <view class="button-container">
+  <button class="run-button" bindtap="goToRunPage">Let's Run!</button>
+  </view >
+  
+  </view> -->
+
+
+</view>
+
+<view class="user" wx:if="{{isdata===true}}">
+<view class="profile">
+  <image class="avatar" src="{{ avatarUrl }}"></image>
+  <text class="username">{{ username }}</text>
+  <view class="info">
+    <text class="label">身高：</text>
+    <text class="value">{{ height }} cm</text>
+  </view>
+  <view class="info">
+    <text class="label">体重：</text>
+    <text class="value">{{ weight }} kg</text>
+  </view>
+  <view class="info">
+    <text class="label">目标卡路里：</text>
+    <text class="value">{{  kcal }} kcal</text>
+  </view>
+
+  <view class="info">
+    <text class="label">今日已消耗卡路里：</text>
+    <text class="value">{{ todayCalories }} kcal</text>
+  </view>
+  <view class="progress-bar">
+    <view class="progress-bar-inner" style="width: {{ progresskal }}%;"></view>
+  </view>
+  <view class="info">
+    <text class="label">目标里程数：</text>
+    <text class="value">{{  km }} km</text>
+  </view>
+    <view class="info">
+    <text class="label">今日已跑里程数：</text>
+    <text class="value">{{ todaykm}}km </text>
+  </view>
+  <view class="progress-bar">
+    <view class="progress-bar-inner" style="width: {{ progresskm }}%;"></view>
+  </view>
+
+   <view class="button-container">
+  <button class="run-button" bindtap="goToRunPage">Start To Run!</button>
+  </view >
+</view>
+
+</view>
+</view>
+<footer></footer>

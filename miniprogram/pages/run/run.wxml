@@ -1,0 +1,32 @@
+<header></header>
+<view class="container">
+  <view class="header">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <text class="username">{{username}}</text>
+  </view>
+  <view class="data">
+    <view class="item">
+      <text class="label">运动时间:</text>
+      <text class="value">{{duration}}</text>
+    </view>
+    <view class="item">
+      <text class="label">配速:</text>
+      <text class="value">{{pace}}</text>
+    </view>
+    <view class="item">
+      <text class="label">里程:</text>
+      <text class="value">{{distance}}</text>
+    </view>
+ 
+  </view>
+  <view class="map-container">
+    <map class="map" id="run-map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="{{true}}" style="width: 120%; height: 100%;"></map>
+  </view>
+  <view class="controls">
+    <button wx:if="{{!isRunning && !isPaused}}" class="start-button" bindtap="startRun">开始跑步</button>
+    <button wx:if="{{isRunning && !isPaused}}" class="pause-button" bindtap="pauseRun">暂停跑步</button>
+    <button wx:if="{{isRunning && isPaused}}" class="resume-button" bindtap="resumeRun">继续跑步</button>
+    <button wx:if="{{isRunning}}" class="stop-button" bindlongtap="stopRun">结束跑步</button>
+  </view>
+</view>
+<footer></footer>

@@ -1,0 +1,128 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #2e2e2e, #4f4f4f);
+  
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30rpx;
+}
+
+
+.header {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.go-button {
+  padding: 12rpx 24rpx;
+  background-color: #3896c2;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4rpx;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.go-button:hover {
+  background-color: #20bfc4;
+}
+
+.record-list {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 20rpx;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  background-color: #333;
+  border-radius: 8rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.record-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.record-image {
+  width: 230rpx;
+  height: 100px;
+  
+  margin-right: 20rpx;
+  border: 2rpx solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ 
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.record-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.record-time {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8rpx;
+}
+
+.record-distance {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8rpx;
+}
+
+.record-duration,
+.record-pace {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8rpx;
+  filter: brightness(0) invert(1);
+}
+
+.duration-text,
+.pace-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.no-record {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  margin-top: 40rpx;
+}
+
+.bottom-tip {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 20rpx;
+}

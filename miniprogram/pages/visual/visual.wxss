@@ -1,0 +1,100 @@
+/* visualization.wxss */
+
+/* 用户头像和用户名样式 */
+.container{
+  background: linear-gradient(to bottom, #1396d3, #FF8C00);
+  padding: 20px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 跑步数据可视化展示样式 */
+.running-data {
+  margin-top: 30px;
+  background-color: #FDB933;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.running-data .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 卡路里数据消耗可视化展示样式 */
+.calories-data {
+  margin-top: 30px;
+  background-color: #FF585D;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calories-data .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 微信步数可视化展示样式 */
+.step-data {
+  margin-top: 30px;
+  background-color: #4AC4E9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.step-data .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 动态字体样式 */
+@keyframes dynamic-font {
+  0% { font-size: 16px; }
+  50% { font-size: 20px; }
+  100% { font-size: 16px; }
+}
+
+.running-data .title,
+.calories-data .title,
+.step-data .title {
+  animation: dynamic-font 2s infinite;
+}
+
+/* 动画效果样式 */
+@keyframes slide-in {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.running-data,
+.calories-data,
+.step-data {
+  animation: slide-in 1s ease-out;
+}

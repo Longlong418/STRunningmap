@@ -1,0 +1,30 @@
+<header></header>
+<view class="about">
+
+<view class="pubTitle">
+<view class="en">关于我</view>
+<view class="line"></view>
+</view>
+
+<view class="content">
+<view class="item">
+我是谁
+</view>
+<view class="row">
+我是Longlong，是一个即将大三的人工智能专业的学生，日常喜欢打打球，听听歌，喜欢喝水吃饭，励志于做一个能健康生活的人！技术面的话，学过一点点算法、学过一些前端框架、还有一点点机器学习(作为一个人工智能专业的人，在这点上我很羞愧)，但是学的都很不咋地。希望未来我能专注一个方向学习，而不是看见什么就学些什么
+</view>
+<view class="item">
+关于该小程序
+</view>
+<view class="row">
+该小程序是我开发的的第一个小程序，很简陋，技术含量是一点没有（可能还有很多bug，请您多多见谅）
+</view>
+<view class="item">
+声明
+</view>
+<view class="row">您的跑步数据，注册账号的名字和头像会保存在数据库,其他的数据一律存储在本地</view>
+</view>
+
+</view>
+
+<footer></footer>

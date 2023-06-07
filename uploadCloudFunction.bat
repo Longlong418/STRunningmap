@@ -1,0 +1,1 @@
+"D:\前端\小程序学习笔记\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-0g4gycsq3bf7634c --n quickstartFunctions --r --project "D:\小程序\STRunningmap" --report_first --report
