@@ -76,7 +76,7 @@ Page({
     this.data.timer = setInterval(() => {
       // 更新运动数据，例如 duration, pace, distance, calories
       const elapsedTime = Date.now() - this.data.startTime - this.data.pausedDuration;
-      const formattedTime = this.formatTime(elapsedTime);
+      const formattedTime = this.formatTime(elapsedTime);//格式化
       const distance = this.calculateDistance();
       const pace = this.calculatePace(distance, elapsedTime);
       this.setData({
@@ -304,11 +304,11 @@ Page({
 
     return distance;
   },
-
+  //计算两点之间的位置
   calculateDistanceBetweenPoints(lat1, lon1, lat2, lon2) {
     const radius = 6371; // 地球半径，单位为 km
-    const dLat = this.degreesToRadians(lat2 - lat1);
-    const dLon = this.degreesToRadians(lon2 - lon1);
+    const dLat = this.degreesToRadians(lat2 - lat1);//维度差
+    const dLon = this.degreesToRadians(lon2 - lon1);//经度差
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(this.degreesToRadians(lat1)) * Math.cos(this.degreesToRadians(lat2)) *
@@ -318,7 +318,7 @@ Page({
 
     return distance;
   },
-
+//角度转换为弧度
   degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
   },

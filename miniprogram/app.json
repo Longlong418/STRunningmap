@@ -51,7 +51,7 @@
 
   "usingComponents": {
     "header": "components/header/header",
-    "articless": "components/articless/articless",
+    
     "footer": "components/footer/footer"
     
     

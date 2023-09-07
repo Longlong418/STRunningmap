@@ -239,9 +239,9 @@ Page({
       return;
     }
 
-    if (steps === 3 && kcal === '') {
+    if (steps === 3 && (kcal === ''||km==='')) {
       wx.showToast({
-        title: '请输入每天想要消耗的卡路里',
+        title: '请输入每天想要消耗的卡路里和里程数',
         icon: 'none',
       });
       return;
